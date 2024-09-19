@@ -9,27 +9,13 @@ Space complexity O(1)
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int max = 0;
         int sum = 0;
         int size = nums.size();
-        bool contains_zero = false;
         for(int i=0; i<nums.size();i++){
-            if(max > nums[i]){
-                max = nums[i];
-            }
-            if(nums[i] == 0){
-               contains_zero = true; 
-            }
             sum += nums[i];
         }
         int expectedSum = (size+1) * (size) / 2;
 
-        if(expectedSum == sum && contains_zero){
-            return max+1;
-        }else if(expectedSum == sum){
-            return 0;
-        }else{
-            return expectedSum - sum;
-        }
+        return expectedSum - sum;
     }
 };
