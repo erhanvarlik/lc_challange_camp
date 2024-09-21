@@ -3,7 +3,7 @@ Since the number range is [0, n] and it is guaranteed that there is only one mis
 we can simply find the total sum of the array by yusing n*(n-1)/2 formula.
 So, the expected sum and the sum of items in the array should be equal if there is no missing one.
 Otherwise the difference between them will give us the missing element.
-Time complexity O(n) finding the max and zero.
+Time complexity O(n) traversing the array and finding sum.
 Space complexity O(1) 
 */
 class Solution {
